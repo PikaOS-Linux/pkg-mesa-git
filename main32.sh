@@ -1,3 +1,6 @@
+#! /bin/bash
+set -e
+
 # Clone Upstream
 git clone https://gitlab.freedesktop.org/mesa/mesa
 cp -rvf ./debian ./mesa/
