@@ -1,4 +1,4 @@
-4bf83d4b3ba578a244c38945d002d6d24f439b54.patch
+#4bf83d4b3ba578a244c38945d002d6d24f439b54.patch
 07_gallium-fix-build-failure-on-powerpcspe.diff
 path_max.diff
 src_glx_dri_common.h.diff
