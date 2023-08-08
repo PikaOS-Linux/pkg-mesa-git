@@ -7,7 +7,7 @@ cp -rvf ./debian ./mesa/
 cd ./mesa
 sed -i ' 1 s/.*/& - PikaOS YellowBirb Vulkan Only Mesa /' ./VERSION
 touch debian/changelog
-echo -e "mesa (23.3-99pika"$(date '+%Y%m%d')".git."$(git rev-parse --short HEAD)") lunar; urgency=medium\n\n  * New GIT Release\n\n -- Ward Nakchbandi <hotrod.master@hotmail.com> Sat, 01 Oct 2022 14:50:00 +0200" > debian/changelog
+echo -e "mesa (23.3-99pika"$(date '+%Y%m%d')".git.0."$(git rev-parse --short HEAD)") lunar; urgency=medium\n\n  * New GIT Release\n\n -- Ward Nakchbandi <hotrod.master@hotmail.com> Sat, 01 Oct 2022 14:50:00 +0200" > debian/changelog
 
 # Get build deps
 apt-get build-dep ./ -y
