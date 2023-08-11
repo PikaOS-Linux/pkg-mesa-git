@@ -219,10 +219,9 @@ Depends: libmesa-git,
  ${shlibs:Depends},
  ${misc:Depends},
  libgbm1-git (= ${binary:Version}) [!hurd-any],
-Provides: libegl-vendor
+Provides: libegl-vendor, libegl-mesa0
 Conflicts: libegl-mesa0
 Replaces: libegl-mesa0
-Provides: libegl-mesa0
 Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: free implementation of the EGL API -- Mesa vendor library
