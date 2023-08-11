@@ -5,7 +5,7 @@ set -e
 git clone https://gitlab.freedesktop.org/mesa/mesa ./mesa-git
 cp -rvf ./debian ./mesa-git/
 cd ./mesa-git
-sed -i ' 1 s/.*/& - PikaOS YellowBirb Vulkan Only Mesa /' ./VERSION
+sed -i ' 1 s/.*/& - PikaOS YellowBirb Mesa Git /' ./VERSION
 touch debian/changelog
 echo -e "mesa-git (23.3-99pika"$(date '+%Y%m%d')".git.0."$(git rev-parse --short HEAD)") lunar; urgency=medium\n\n  * New GIT Release\n\n -- Ward Nakchbandi <hotrod.master@hotmail.com> Sat, 01 Oct 2022 14:50:00 +0200" > debian/changelog
 
@@ -19,4 +19,4 @@ dpkg-buildpackage --no-sign
 # Move the debs to output
 cd ../
 mkdir -p ./output
-mv ./mesa-vulkan*.deb ./output/
+mv ./*.deb ./output/
