@@ -1,4 +1,4 @@
-Source: mesa
+Source: mesa-git
 Section: graphics
 Priority: optional
 Maintainer: First Mate Rummey <fmrummey@gmail.com>
@@ -87,10 +87,10 @@ Depends: libmesa-git,
  mesa-vdpau-drivers-git (= ${binary:Version}),
  mesa-vulkan-drivers-git (= ${binary:Version}),
 Pre-Depends: ${misc:Pre-Depends}
-Conflicts: mesa-pika, mesa
-Replaces: mesa-pika, mesa
+Conflicts: mesa-pika, mesa-stable
+Replaces: mesa-pika, mesa-stable
 Multi-Arch: same
-Description: a meta package to install the latest stable version of mesa.
+Description: a meta package to install the latest git version of mesa.
 
 Package: libmesa-git
 Section: libs
@@ -99,10 +99,10 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
 Pre-Depends: ${misc:Pre-Depends}
-Conflicts: libmesa-pika, libmesa
-Replaces: libmesa-pika, libmesa
+Conflicts: libmesa-pika, libmesa-stable
+Replaces: libmesa-pika, libmesa-stable
 Multi-Arch: same
-Description: mesa stable core.
+Description: mesa git core.
 
 Package: libxatracker2-git
 Section: libs
@@ -435,8 +435,8 @@ Depends: libmesa-git,
  libosmesa6-git (= ${binary:Version}),
  mesa-common-git-dev (= ${binary:Version}) | libgl-dev,
  ${misc:Depends},
-Conflicts: libosmesa-dev, libosmesa6-dev, libosmesa-dev
-Replaces: libosmesa-dev, libosmesa6-dev,  libosmesa-dev
+Conflicts: libosmesa-dev, libosmesa6-dev
+Replaces: libosmesa-dev, libosmesa6-dev
 Provides: libosmesa-dev
 Multi-Arch: same
 Description: Mesa Off-screen rendering extension -- development files

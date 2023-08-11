@@ -120,7 +120,7 @@ Pre-Depends: ${misc:Pre-Depends}
 Conflicts: libmesa-pika, libmesa-stable
 Replaces: libmesa-pika, libmesa-stable
 Multi-Arch: same
-Description: mesa stable core.
+Description: mesa git core.
 
 Package: libxatracker-git-dev
 Section: libdevel
