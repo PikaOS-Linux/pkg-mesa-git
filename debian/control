@@ -69,6 +69,8 @@ Architecture: any
 Depends: libmesa-git,
  ${shlibs:Depends},
  ${misc:Depends},
+ mesa:i386 [amd64] (= ${binary:Version}),
+ mesa:amd64 [i386]  (= ${binary:Version}),
  libd3dadapter9-mesa-git (= ${binary:Version}),
  libegl-mesa0-git (= ${binary:Version}),
  libegl1-mesa-git-dev (= ${binary:Version}),
@@ -91,6 +93,35 @@ Conflicts: mesa-hybrid, mesa-stable, mesa-custom
 Replaces: mesa-hybrid, mesa-stable, mesa-custom
 Multi-Arch: same
 Description: a meta package to install the latest git version of mesa.
+
+Package: mesa-git-no-march
+Section: libs
+Architecture: any
+Depends: libmesa-git,
+ ${shlibs:Depends},
+ ${misc:Depends},
+ libd3dadapter9-mesa-git (= ${binary:Version}),
+ libegl-mesa0-git (= ${binary:Version}),
+ libegl1-mesa-git-dev (= ${binary:Version}),
+ libegl1-mesa-git (= ${binary:Version}),
+ libgbm-git-dev (= ${binary:Version}),
+ libgbm1-git (= ${binary:Version}),
+ libgl1-mesa-dri-git (= ${binary:Version}),
+ libgl1-mesa-glx-git (= ${binary:Version}),
+ libglapi-mesa-git (= ${binary:Version}),
+ libgles2-mesa-git (= ${binary:Version}),
+ libglx-mesa0-git (= ${binary:Version}),
+ libosmesa6-git (= ${binary:Version}),
+ libxatracker2-git (= ${binary:Version}),
+ mesa-common-git-dev (= ${binary:Version}),
+ mesa-va-drivers-git (= ${binary:Version}),
+ mesa-vdpau-drivers-git (= ${binary:Version}),
+ mesa-vulkan-drivers-git (= ${binary:Version}),
+Pre-Depends: ${misc:Pre-Depends}
+Conflicts: mesa-hybrid, mesa-stable, mesa-custom
+Replaces: mesa-hybrid, mesa-stable, mesa-custom
+Description: a meta package to install the latest git version of mesa (no Multi-Arch Support).
+
 
 Package: libmesa-git
 Section: libs
