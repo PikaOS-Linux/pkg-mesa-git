@@ -120,6 +120,7 @@ Depends: libmesa-git,
 Pre-Depends: ${misc:Pre-Depends}
 Conflicts: mesa-hybrid, mesa-stable, mesa-custom
 Replaces: mesa-hybrid, mesa-stable, mesa-custom
+Provides: mesa-git
 Description: a meta package to install the latest git version of mesa (no Multi-Arch Support).
 
 
