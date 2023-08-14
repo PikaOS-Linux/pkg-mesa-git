@@ -89,8 +89,8 @@ Depends: libmesa-git,
  mesa-vdpau-drivers-git (= ${binary:Version}),
  mesa-vulkan-drivers-git (= ${binary:Version}),
 Pre-Depends: ${misc:Pre-Depends}
-Conflicts: mesa-hybrid, mesa-stable, mesa-custom
-Replaces: mesa-hybrid, mesa-stable, mesa-custom
+Conflicts: mesa-hybrid, mesa-stable, mesa-custom, mesa-hybrid-no-march, mesa-stable-no-march, mesa-git-no-march, mesa-custom-no-march
+Replaces: mesa-hybrid, mesa-stable, mesa-custom, mesa-hybrid-no-march, mesa-stable-no-march, mesa-git-no-march, mesa-custom-no-march
 Multi-Arch: same
 Description: a meta package to install the latest git version of mesa.
 
@@ -118,8 +118,8 @@ Depends: libmesa-git,
  mesa-vdpau-drivers-git (= ${binary:Version}),
  mesa-vulkan-drivers-git (= ${binary:Version}),
 Pre-Depends: ${misc:Pre-Depends}
-Conflicts: mesa-hybrid, mesa-stable, mesa-custom
-Replaces: mesa-hybrid, mesa-stable, mesa-custom
+Conflicts: mesa-hybrid, mesa-stable, mesa-custom, mesa-hybrid-no-march, mesa-stable-no-march, mesa-git, mesa-custom-no-march
+Replaces: mesa-hybrid, mesa-stable, mesa-custom, mesa-hybrid-no-march, mesa-stable-no-march, mesa-git, mesa-custom-no-march
 Provides: mesa-git
 Description: a meta package to install the latest git version of mesa (no Multi-Arch Support).
 
