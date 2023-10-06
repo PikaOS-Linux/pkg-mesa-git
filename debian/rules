@@ -15,6 +15,7 @@ DEB_HOST_ARCH_CPU  ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
 # for finding the correct llvm-config when meson doesn't know about it yet
 LLVM_VERSION = 17
 export PATH:=/usr/lib/llvm-$(LLVM_VERSION)/bin/:$(PATH)
+export LIBCLANG_PATH=/usr/lib/llvm-$(LLVM_VERSION)/lib
 
 export DEB_BUILD_MAINT_OPTIONS=optimize=-lto
 # enable LTO everywhere:
@@ -110,9 +111,12 @@ else
 		confflags_GALLIUM += -Dgallium-xa=enabled
 		VULKAN_DRIVERS += intel intel_hasvk
 	endif
-	ifneq (,$(filter $(DEB_HOST_ARCH), amd64))
-		confflags_GALLIUM += -Dintel-clc=enabled
-	endif
+#	ifneq (,$(filter $(DEB_HOST_ARCH), amd64))
+#		confflags_GALLIUM += -Dintel-clc=enabled
+#	endif
+
+
+	confflags_GALLIUM += -Dintel-clc=disabled -Dmicrosoft-clc=disabled
 
 	# Non-Linux ports lack epoll, so wayland isn't ready yet:
 	# https://gitlab.freedesktop.org/wayland/wayland/-/issues/72
