@@ -112,7 +112,9 @@ else
 		VULKAN_DRIVERS += intel intel_hasvk
 	endif
 	ifneq (,$(filter $(DEB_HOST_ARCH), amd64))
-		confflags_GALLIUM += -Dintel-clc=enabled
+		confflags_GALLIUM += -Dintel-clc=false
+        else
+		confflags_GALLIUM += -Dintel-clc=false
 	endif
 
 	# Non-Linux ports lack epoll, so wayland isn't ready yet:
