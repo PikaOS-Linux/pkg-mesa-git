@@ -292,12 +292,12 @@ override_dh_install:
 
   # Copy spirv2dxil and its dependencies on architectures that support WSL/Dozen (dzn)
   ifneq (,$(filter $(DEB_HOST_ARCH), $(WSL_ARCHS)))
-	install -m755 -d debian/mesa-vulkan-drivers/usr/bin
+	install -m755 -d debian/mesa-vulkan-drivers-git/usr/bin
 	mv debian/tmp/usr/bin/spirv2dxil \
-	   debian/mesa-vulkan-drivers/usr/bin
-	install -m755 -d debian/mesa-vulkan-drivers/usr/lib/${DEB_HOST_MULTIARCH}/
+	   debian/mesa-vulkan-drivers-git/usr/bin
+	install -m755 -d debian/mesa-vulkan-drivers-git/usr/lib/${DEB_HOST_MULTIARCH}/
 	mv debian/tmp/usr/lib/${DEB_HOST_MULTIARCH}/libspirv_to_dxil.* \
-	   debian/mesa-vulkan-drivers/usr/lib/${DEB_HOST_MULTIARCH}/
+	   debian/mesa-vulkan-drivers-git/usr/lib/${DEB_HOST_MULTIARCH}/
   endif
 
 	dh_install -a
