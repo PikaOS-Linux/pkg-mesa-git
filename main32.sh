@@ -5,7 +5,7 @@ set -e
 git clone https://gitlab.freedesktop.org/mesa/mesa ./mesa-git
 cp -rvf ./debian ./mesa-git/
 cd ./mesa-git
-git checkout staging/24.0
+git checkout main
 git submodule update --init
 sed -i ' 1 s/.*/& - PikaOS YellowBirb Mesa Git /' ./VERSION
 touch debian/changelog
